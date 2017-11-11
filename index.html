@@ -14,23 +14,35 @@
   <nav>
     <div class="container">
       <div class="nav__logo">
-        <span>Sit <span class="nav__logo--color">on</span> chair</span>
+        <a href="#"><span>Sit <span class="nav__logo--color">on</span> chair</span></a>
       </div>
       <div class="nav__items">
         <ul>
-          <a href="#"><li>O firmie</li></a>
-          <a href="#"><li>Galeria</li></a>
-          <a href="#"><li>Kontakt</li></a>
+          <a href="#">
+            <li>O firmie</li>
+          </a>
+          <li class="nav__items__detail">
+            <ul>
+              <a href=""><li>Aktualności</li></a>
+              <a href=""><li>Nasz team</li></a>
+              <a href=""><li>Historia</li></a>
+            </ul>
+          </li>
+          <a href="#">
+            <li>Galeria</li>
+          </a>
+          <a href="#">
+            <li>Kontakt</li>
+          </a>
         </ul>
       </div>
     </div>
   </nav>
   <header>
     <div class="container">
-        <a href="#">&lt;</a>
+      <a href="#">&lt;</a>
       <div class="header__chair">
         <img src="./images/black_chair.png" alt="czarny fotel">
-        <div class="clearfix"></div>
       </div>
       <div class="header__info">
         <h1>Sit <span class="header__info--color">on</span> our <span class="header__info--color">chair</h1>
@@ -45,10 +57,14 @@
   <aside>
     <div class="container">
       <div class="foto1">
-        <div class="foto__text"><p>Chair <span>clair</span></p></div>
+        <div class="foto__text">
+          <p>Chair <span class="foto__text--underline">clair</span></p>
+        </div>
       </div>
       <div class="foto2">
-        <div class="foto__text"><p>Chair <span>margarita</span></p></div>
+        <div class="foto__text">
+          <p>Chair <span class="foto__text--underline">margarita</span></p>
+        </div>
       </div>
       <div class="foto3">
         <article>
@@ -63,13 +79,16 @@
       </div>
     </div>
   </aside>
-  <section>
+  <section class="section__price">
     <div class="container">
       <h2>Cennik</h2>
       <div class="planType">
         <div class="planType__donut"></div>
         <h3>Basic plan</h3>
-        <div class="planType__price"></div>
+        <div class="planType__price">
+          <p>85<sup>99</sup></p>
+          <p>PLN/MSC</p>
+        </div>
         <div class="planType__options">
           <ul>
             <li>Zakup towaru + dowóz</li>
@@ -81,7 +100,10 @@
       <div class="planType">
         <div class="planType__donut"></div>
         <h3>Standart plan</h3>
-        <div class="planType__price"></div>
+        <div class="planType__price">
+          <p>95<sup>99</sup></p>
+          <p>PLN/MSC</p>
+        </div>
         <div class="planType__options">
           <ul>
             <li>Zakup towaru + dowóz</li>
@@ -94,7 +116,10 @@
       <div class="planType">
         <div class="planType__donut"></div>
         <h3>Advance plan</h3>
-        <div class="planType__price"></div>
+        <div class="planType__price">
+          <p>211<sup>99</sup></p>
+          <p>PLN/MSC</p>
+        </div>
         <div class="planType__options">
           <ul>
             <li>Zakup towaru + dowóz</li>
@@ -107,34 +132,45 @@
       </div>
     </div>
   </section>
-  <section>
+  <section class="section__contact">
     <div class="container">
-      <div class="form"></div>
       <h2>Kontakt</h2>
-      <form action="">
-        <input type="text" placeholder="Imię" name="name">
-        <input type="email" placeholder="email" name="email">
-        <textarea name="message" rows="8" cols="80"></textarea>
-      </form>
-    </div>
-    <div class="form__submit">
-      <img src="./images/red_chair.png" alt="czerwony fotel">
-      <input type="checkbox" name="agree" value="iAgree" checked> Zgadzam się na przetwarzanie danych osobowych
-      <button>Wyślij</button>
-    </div>
+      <div class="form__user">
+        <form action="">
+          <input type="text" placeholder="Imię" name="name">
+          <input type="email" placeholder="email" name="email">
+          <textarea name="message" rows="5" cols="80" placeholder="Wiadomość"></textarea>
+        </form>
+      </div>
+      <div class="form__submit">
+        <img src="./images/red_chair.png" alt="czerwony fotel">
+        <form action="">
+          <input type="checkbox" name="agree" value="iAgree" id="check">
+          <label for="check"></label>
+          <p>Zgadzam się na przetwarzanie danych osobowych</p>
+          <button>Wyślij</button>
+        </form>
+      </div>
     </div>
   </section>
   <footer>
-    <span>Copyright 2014 | All Rights Reserved. - Sit on chair</span>
-    <span>
+    <div class="container">
+      <div class="footer__copy">
+        <p>Copyright 2014 | All Rights Reserved. - Sit on chair</p>
+      </div>
+      <div class="footer__social">
+        <span>
       <a href="#"><img src="./images/flickr.png" alt="flickr"></a>
       <a href="#"><img src="./images/vimeo.png" alt="vimeo"></a>
       <a href="#"><img src="./images/pinterest.png" alt="pinterest"></a>
       <a href="#"><img src="./images/twitter.png" alt="twitter"></a>
     </span>
-    <span>Sit on chair</span>
+      </div>
+      <div class="footer__logo">
+        <p>Sit <span>on</span> chair</p>
+      </div>
+    </div>
   </footer>
-
 </body>
 
 </html>
