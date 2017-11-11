@@ -1,8 +1,8 @@
 body, h1, h2, h3, h4, .nav__items ul, .planType__price p {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
 .container {
   width: 1200px;
@@ -43,16 +43,13 @@ nav {
 .nav__items__detail {
   display: none;
 }
-/*.nav__items a li:hover .nav__items__detail {
-  display: block;
-}*/
 header {
   width: 100%;
   height: 550px;
-  background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(145,145,145,0) 32%, rgba(209,209,209,0.13) 46%, rgba(204,204,204,0.65) 100%);
-  background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(145,145,145,0) 32%,rgba(209,209,209,0.13) 46%,rgba(204,204,204,0.65) 100%);
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(145,145,145,0) 32%,rgba(209,209,209,0.13) 46%,rgba(204,204,204,0.65) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6cccccc',GradientType=0 );
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(145, 145, 145, 0) 32%, rgba(209, 209, 209, 0.13) 46%, rgba(204, 204, 204, 0.65) 100%);
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(145, 145, 145, 0) 32%, rgba(209, 209, 209, 0.13) 46%, rgba(204, 204, 204, 0.65) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(145, 145, 145, 0) 32%, rgba(209, 209, 209, 0.13) 46%, rgba(204, 204, 204, 0.65) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6cccccc', GradientType=0);
 }
 .header__chair, .header__info {
   margin-top: 100px;
@@ -73,7 +70,7 @@ header a {
 }
 img[alt="czarny fotel"] {
   width: 550px;
-  float:left;
+  float: left;
 }
 .header__info h1 {
   margin-top: 50px;
@@ -101,7 +98,7 @@ img[alt="czarny fotel"] {
   width: 220px;
   margin: 0 220px;
 }
-.header__btn:hover {
+.header__btn:hover, .form__submit button:hover {
   background: #00BA9A;
 }
 .foto {
@@ -136,7 +133,7 @@ img[alt="czarny fotel"] {
 .foto__text {
   width: 380px;
   height: 70px;
-  background: rgba(231,225,224, .5);
+  background: rgba(231, 225, 224, .5);
   margin-top: 160px;
 }
 .foto__text p {
@@ -160,7 +157,7 @@ h4.foto__text {
   font-weight: 700;
   height: 45px;
 }
-.foto3 > article > p {
+.foto3>article>p {
   line-height: 25px;
   font-size: 13px;
 }
@@ -178,6 +175,9 @@ h4.foto__text {
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
+}
+.section__contact h2 {
+  margin-bottom: 30px;
 }
 .planType {
   width: 380px;
@@ -288,6 +288,9 @@ h4.foto__text {
   bottom: 20px;
   left: 115px;
 }
+.section__price button:hover {
+  background: #F1F1F1;
+}
 input, textarea {
   width: 760px;
   border-radius: 5px;
@@ -313,34 +316,34 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   float: left;
 }
 .form__submit img {
-  width: 300px;
+  width: 280px;
 }
 .form__submit p {
-  font-size: 15px;
+  font-size: 16px;
   display: inline-block;
   width: 270px;
   color: #E4E4E4;
   padding: 5px;
 }
 input[type=checkbox] {
-    display:none;
+  display: none;
 }
-input[type=checkbox] + label {
-    height: 30px;
-    width: 30px;
-    display: inline-block;
-    padding: 0;
-    border: 1px solid #27C7AB;
-    border-radius: 3px;
+input[type=checkbox]+label {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  padding: 0;
+  border: 1px solid #27C7AB;
+  border-radius: 3px;
 }
-input[type=checkbox]:checked + label {
-    background: url('../images/form_ok.jpg') no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 30px;
-    width: 30px;
-    display:inline-block;
-    padding: 0;
+input[type=checkbox]:checked+label {
+  background: url('../images/form_ok.jpg') no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  padding: 0;
 }
 .form__submit button {
   background: #27C7AB;
@@ -362,6 +365,7 @@ input[type=checkbox]:checked + label {
 .footer__social {
   margin: 30px 0;
   width: 170px;
+  position: relative;
 }
 .footer__logo {
   margin: 30px 0;
@@ -377,5 +381,5 @@ input[type=checkbox]:checked + label {
 footer::after, nav::after, aside::after, .section__price::after, .section__contact::after {
   content: "";
   display: block;
-  clear:both;
+  clear: both;
 }
