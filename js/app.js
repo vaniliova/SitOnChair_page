@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-//###########TOOLTIP
+//########################################### TOOLTIP #####################################
 var tooltip = document.querySelector('.nav__items');
 var tooltip1 = document.querySelector('.nav__items__detail');
 var arrow = document.querySelector('.nav__items__detail--arrow');
@@ -16,7 +16,7 @@ tooltip1.addEventListener('mouseout', function(event) {
   tooltip1.style.display = "none";//w css ostylować zamienione linki
 });
 
-//############SLIDER
+//######################################## SLIDER ######################################################3
 var arrowRight = document.querySelector('.header__arrow--right');
 var arrowLeft = document.querySelector('.header__arrow--left');
 var chairFoto = document.querySelectorAll('.header__chair img');
@@ -66,12 +66,6 @@ var transport = document.querySelector('.transport');
 //Pobieranie pol sumy
 var sum = document.querySelector('.sum strong');
 
-//Etap 4 - informacje o transporcie na klik
-transportCost.addEventListener('click', function() {
-    transport.innerText = 'Transport';
-    transportValue.innerText = this.dataset.price;
-});
-
 //Pętla po strzałkach + eventy
 for (var i = 0; i < listArrows.length; i++) {
   listArrows[i].addEventListener('click', function() {
@@ -99,11 +93,21 @@ for (var i = 0; i < listArrows.length; i++) {
         }
 
         //Wyświetlanie sumy cen wybranego produktu
-        sum.innerText = Number(titleValue.innerText) + Number(colorValue.innerText) + Number(patternValue.innerText) + Number(transportValue.innerText);
+        sum.innerText = Number(titleValue.innerText) + Number(colorValue.innerText) + Number(patternValue.innerText);
       });
     }
   });
 }
+
+//Etap 4 - informacje o transporcie na klik
+transportCost.addEventListener('click', function() {
+    transport.innerText = 'Transport';
+    transportValue.innerText = this.dataset.price;
+    sum.innerText = Number(sum.innerText) + Number(transportValue.innerText);
+    //TODO
+    //zabezpieczyć przed dodawaniem wielokrotnie transportu i zwiększaniem sumy,
+    //zrobić coś, żeby działało gdy najpierw user wybeirze transport a potem fotel
+});
 
 
 
