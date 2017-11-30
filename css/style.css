@@ -26,7 +26,7 @@ body, h1, h2, h3, h4, .nav__items ul, .planType__price p {
 .nav__items ul {
   float: right;
 }
-.nav__items a li {
+.nav__items li {
   color: #FFF;
   width: 100px;
   float: left;
@@ -37,25 +37,30 @@ body, h1, h2, h3, h4, .nav__items ul, .planType__price p {
   display: block;
   position: relative;
 }
-.nav__items a li:hover {
+.nav__items li a {
+  text-decoration: none;
+  color: #FFF;
+}
+.nav__items li:hover {
   background: rgba(39, 199, 171, .5);
   position: relative;
 }
-.nav__items__detail {
-  display: none;
+.nav__items__detail ul {
+  display: block;
   width: 100px;
   position: absolute;
   top: 60px;
-  list-style-type: none;
-}
-.nav__items__detail a li{
   background: #000;
-  font-size: 14px;
-  text-transform: capitalize;
-  line-height: 30px;
+  font-size: 12px;
 }
-.nav__items__detail--arrow {
-  display: none;
+/*.nav__items__detail-list li {
+  list-style-type: none;
+  text-transform: capitalize;
+  text-decoration: none;
+  color: #FFF;
+}*/
+/*.nav__items__detail--arrow {
+  display: block;
   position: absolute;
   top: -10px;
   left: 40px;
@@ -64,7 +69,7 @@ body, h1, h2, h3, h4, .nav__items ul, .planType__price p {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-bottom: 10px solid #000;
-}
+}*/
 
 .main__header {
   width: 100%;

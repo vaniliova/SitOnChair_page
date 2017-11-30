@@ -1,20 +1,20 @@
 document.addEventListener('DOMContentLoaded', function() {
 
 //########################################### TOOLTIP #####################################
-var tooltip = document.querySelector('.nav__items');
-var tooltip1 = document.querySelector('.nav__items__detail');
-var arrow = document.querySelector('.nav__items__detail--arrow');
-
-tooltip.querySelector('li').addEventListener('mouseover', function(event) {
-  event.preventDefault();
-  arrow.style.display = "block";
-  tooltip1.style.display = "block";
-});
-tooltip1.addEventListener('mouseout', function(event) {
-  event.preventDefault();
-  arrow.style.display = "none";
-  tooltip1.style.display = "none";//w css ostylować zamienione linki
-});
+// var tooltip = document.querySelector('.nav__items');
+// var tooltip1 = document.querySelector('.nav__items__detail');
+// var arrow = document.querySelector('.nav__items__detail--arrow');
+//
+// tooltip.querySelector('li').addEventListener('mouseover', function(event) {
+//   event.preventDefault();
+//   arrow.style.display = "block";
+//   tooltip1.style.display = "block";
+// });
+// tooltip1.addEventListener('mouseout', function(event) {
+//   event.preventDefault();
+//   arrow.style.display = "none";
+//   tooltip1.style.display = "none";//w css ostylować zamienione linki
+// });
 
 //######################################## SLIDER ######################################################3
 var arrowRight = document.querySelector('.header__arrow--right');
