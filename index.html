@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="nav">
     <div class="container">
       <div class="nav__logo">
         <a href="#"><span>Sit <span class="nav__logo--color">on</span> chair</span></a>
@@ -40,7 +40,7 @@
       </div>
     </div>
   </nav>
-  <header>
+  <header class="main__header">
     <div class="container">
       <a class="header__arrow--left" href="#">&lt;</a>
       <div class="header__chair">
@@ -135,6 +135,89 @@
       </div>
     </div>
   </section>
+
+
+<!-- gotowy html do list rozwijanych -->
+  <section class="application">
+    <div class="dropdown__container">
+        <section class="choice_part inline">
+            <header>
+                <h3>SKOMPONUJ SWOJE KRZESŁO</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="form">
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz rodzaj</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-price="200">Clair</li>
+                        <li data-price="350">Margarita</li>
+                        <li data-price="470">Selena</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz kolor</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-price="10">Czerwony</li>
+                        <li data-price="0">Czarny</li>
+                        <li data-price="15">Pomarańczowy</li>
+                    </ul>
+                </div>
+                <div class="drop_down_list">
+                    <span class="list_label">Wybierz materiał</span>
+                    <span class="list_arrow"></span>
+                    <ul class="list_panel">
+                        <li data-price="0">Tkanina</li>
+                        <li data-price="50">Skóra</li>
+                    </ul>
+                </div>
+                <br>
+                <div>
+                    <input type="checkbox" id="transport" data-price="80">
+                    <label class="choice__label" for="transport"></label>
+                    <p class="checkbox__transport">Transport</p>
+                </div>
+
+                <!--<div class="checkbox"></div>-->
+                <!--<span class="list_label inline_text">Transport</span>-->
+            </div>
+        </section>
+
+        <section class="image_part inline">
+            <img src="images/red_chair.png">
+        </section>
+
+        <section class="summary_part inline">
+            <header class="align_right">
+                <h3>PODSUMOWANIE</h3>
+                <span class="green_bell"></span>
+            </header>
+
+            <div class="summary_panel">
+                <div class="panel_left">
+                    <h4 class="title">Twój fotel</h4>
+                    <span class="color"></span>
+                    <span class="pattern"></span>
+                    <span class="transport"></span>
+                </div>
+                <div class="panel_right">
+                    <h4 class="title value1"></h4>
+                    <span class="color value2"></span>
+                    <span class="pattern value3"></span>
+                    <span class="transport value4"></span>
+                </div>
+                <div class="sum_label">SUMA</div>
+                <div class="sum"><strong></strong></div>
+            </div>
+            <a href="" class="green_button">Zamawiam</a>
+        </section>
+    </div>
+</section>
+
+
+
   <section class="section__contact">
     <div class="container">
       <h2>Kontakt</h2>
@@ -146,7 +229,7 @@
         </form>
       </div>
       <div class="form__submit">
-        <img src="./images/red_chair.png" alt="czerwony fotel">
+        <img class="form__img" src="./images/red_chair.png" alt="czerwony fotel">
         <form action="">
           <input type="checkbox" name="agree" value="iAgree" id="check">
           <label for="check"></label>

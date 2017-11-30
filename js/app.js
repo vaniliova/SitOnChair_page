@@ -43,6 +43,75 @@ arrowLeft.addEventListener('click', function() {
 
 
 
+//######################################## CHOICE SECTION ###########################################
+
+//Etap 1 - dropdown
+var listArrows = document.querySelectorAll('.list_arrow');
+
+//Pobieranie wybranych elementow z list
+var title = document.querySelector('.title');
+var color = document.querySelector('.color');
+var pattern = document.querySelector('.pattern');
+
+//Pobieranie wartości z dodanych elementow
+var titleValue = document.querySelector('.value1');
+var colorValue = document.querySelector('.value2');
+var patternValue = document.querySelector('.value3');
+
+//Pobieranie informacji o transporcie
+var transportCost = document.querySelector('#transport');
+var transportValue = document.querySelector('.value4');
+var transport = document.querySelector('.transport');
+
+//Pobieranie pol sumy
+var sum = document.querySelector('.sum strong');
+
+//Etap 4 - informacje o transporcie na klik
+transportCost.addEventListener('click', function() {
+    transport.innerText = 'Transport';
+    transportValue.innerText = this.dataset.price;
+});
+
+//Pętla po strzałkach + eventy
+for (var i = 0; i < listArrows.length; i++) {
+  listArrows[i].addEventListener('click', function() {
+    var listPanel = this.parentElement.querySelector('.list_panel');
+    listPanel.classList.toggle('show');
+
+    //Etap 2 - dodawanie elementow do panelu podsumowania
+    var elements = this.parentElement.querySelectorAll('.list_panel li');
+    for (var j = 0; j < elements.length; j++) {
+      elements[j].addEventListener('click', function() {
+
+        //Etap 3 - Warunki
+        if (this.innerText == 'Clair' || this.innerText == 'Margarita' || this.innerText == 'Selena') {
+          title.innerText = this.innerText;
+          titleValue.innerText = this.dataset.price;
+          listPanel.classList.remove('show');
+        } else if (this.innerText == 'Czerwony' || this.innerText == 'Czarny' || this.innerText == 'Pomarańczowy') {
+          color.innerText = this.innerText;
+          colorValue.innerText = this.dataset.price;
+          listPanel.classList.remove('show');
+        } else if (this.innerText == 'Tkanina' || this.innerText == 'Skóra') {
+          pattern.innerText = this.innerText;
+          patternValue.innerText = this.dataset.price;
+          listPanel.classList.remove('show');
+        }
+
+        //Wyświetlanie sumy cen wybranego produktu
+        sum.innerText = Number(titleValue.innerText) + Number(colorValue.innerText) + Number(patternValue.innerText) + Number(transportValue.innerText);
+      });
+    }
+  });
+}
+
+
+
+
+
+
+
+
 
 
 
