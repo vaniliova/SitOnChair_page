@@ -23,54 +23,80 @@ body, h1, h2, h3, h4, .nav__items ul, .planType__price p {
 .nav__logo--color, .header__info--color {
   color: #27C7AB;
 }
-.nav__items ul {
+/*Navigacja -> menu+submenu*/
+.nav__main ul {
+  margin: 0;
   float: right;
 }
-.nav__items li {
+.nav__main li {
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+}
+.nav__main li a {
   color: #FFF;
-  width: 100px;
-  float: left;
-  list-style-type: none;
-  text-transform: uppercase;
   line-height: 50px;
-  text-align: center;
-  display: block;
-  position: relative;
-}
-.nav__items li a {
   text-decoration: none;
-  color: #FFF;
+  text-transform: uppercase;
+  transition: 0.5s color;
 }
-.nav__items li:hover {
-  background: rgba(39, 199, 171, .5);
-  position: relative;
+.nav__main li a:hover {
+  color: #27C7AB;
 }
-.nav__items__detail ul {
-  display: block;
-  width: 100px;
+.nav__main .nav__main__submenu {
   position: absolute;
   top: 60px;
+  left: 50%;
+  transform: translate(-50%, 0);
   background: #000;
-  font-size: 12px;
+  padding: 10px 0;
+  visibility: hidden;
+  text-align: left;
+  opacity: 0;
+  transition: 0.5s opacity;
+  z-index: 10;
 }
-/*.nav__items__detail-list li {
-  list-style-type: none;
-  text-transform: capitalize;
-  text-decoration: none;
-  color: #FFF;
-}*/
-/*.nav__items__detail--arrow {
-  display: block;
-  position: absolute;
-  top: -10px;
-  left: 40px;
+.nav__main .nav__main__submenu:before {
+  content: '';
   width: 0;
   height: 0;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #000;
-}*/
-
+  border: 10px solid rgba(0,0,0,0);
+  border-bottom-color: #000;
+  position: absolute;
+  left: 50%;
+  top: -20px;
+  transform: translate(-50%, 0);
+}
+.nav__main .nav__main__submenu:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -15px;
+  width: 100%;
+  height: 15px;
+}
+ /* pokazanie menu po najechaniu */
+.nav__main li:hover .nav__main__submenu {
+  opacity: 1;
+  visibility: visible;
+}
+.nav__main li:hover > a {
+  color: #27C7AB;
+}
+.nav__main .nav__main__submenu li {
+  display: block;
+  text-align: left;
+  padding: 0;
+  margin: 0;
+}
+.nav__main .nav__main__submenu li a {
+  height: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 12px;;
+  padding: 0 20px;
+}
+/*Sekcja ze sliderem*/
 .main__header {
   width: 100%;
   height: 550px;
@@ -103,8 +129,14 @@ img[alt="czarny fotel"] {
 img[alt="czerwony fotel"] {
   width: 350px;
   float: left;
-  margin-left: 90px;
-  margin-top: 50px;
+  margin-left: 100px;
+  margin-top: 40px;
+}
+img[alt="pomarańczowy fotel"] {
+  width: 450px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 50px
 }
 .invisible {
   display: none;
@@ -138,6 +170,7 @@ img[alt="czerwony fotel"] {
 .header__btn:hover, .form__submit button:hover {
   background: #00BA9A;
 }
+/*ZDJĘCIA*/
 .foto {
   width: 400px;
   height: 280px;
@@ -163,6 +196,10 @@ img[alt="czerwony fotel"] {
 .foto3 {
   border: 1px solid #E1E1E1;
   height: 270px;
+}
+.foto1:hover .foto__text, .foto2:hover .foto__text {
+  opacity: 0;
+  transition: .5s opacity;
 }
 .foto3 article {
   padding: 0 20px;
@@ -607,7 +644,7 @@ input[type=checkbox]:checked+label {
   font-weight: 700;
 }
 /*Clearfix for every float*/
-footer::after, nav::after, aside::after, .section__price::after, .section__contact::after {
+footer::after, nav::after, aside::after, .section__price::after, .section__contact::after, .nav__main:after {
   content: "";
   display: block;
   clear: both;

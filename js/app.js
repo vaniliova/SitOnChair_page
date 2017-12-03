@@ -1,29 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-//########################################### TOOLTIP #####################################
-// var tooltip = document.querySelector('.nav__items');
-// var tooltip1 = document.querySelector('.nav__items__detail');
-// var arrow = document.querySelector('.nav__items__detail--arrow');
-//
-// tooltip.querySelector('li').addEventListener('mouseover', function(event) {
-//   event.preventDefault();
-//   arrow.style.display = "block";
-//   tooltip1.style.display = "block";
-// });
-// tooltip1.addEventListener('mouseout', function(event) {
-//   event.preventDefault();
-//   arrow.style.display = "none";
-//   tooltip1.style.display = "none";//w css ostylować zamienione linki
-// });
-
-//######################################## SLIDER ######################################################3
+//######################################## SLIDER
 var arrowRight = document.querySelector('.header__arrow--right');
 var arrowLeft = document.querySelector('.header__arrow--left');
 var chairFoto = document.querySelectorAll('.header__chair img');
 var imgId = 0;
 
-chairFoto[imgId].classList.add('invisible');
-//eventy wywołuja się po podwojnym kliknięciu...
 arrowRight.addEventListener('click', function() {
   chairFoto[imgId].classList.add('invisible');
   imgId++;
@@ -39,11 +21,12 @@ arrowLeft.addEventListener('click', function() {
     imgId = chairFoto.length-1;
   }
   chairFoto[imgId].classList.remove('invisible');
-})
+});
+
+//######################################## IMAGES
 
 
-
-//######################################## CHOICE SECTION ###########################################
+//######################################## CHOICE SECTION
 
 //Etap 1 - dropdown
 var listArrows = document.querySelectorAll('.list_arrow');
@@ -112,7 +95,93 @@ transportCost.addEventListener('click', function() {
 
 
 
-
+// //Kod od Marcina - SZTOS!
+// //tutaj bedziemy podliczac
+//     var dataCost = {
+//         color : 0,
+//         pattern : 0,
+//         type : 0,
+//         transport : 0
+//     }
+//
+//     //zliczam dane w powyszym obiekcie
+//     function sumCost() {
+//         var totalCost = 0;
+//         for (var i in dataCost) {
+//             if (dataCost.hasOwnProperty(i)) {
+//                 totalCost += dataCost[i];
+//             }
+//         }
+//         return totalCost;
+//     }
+//
+//     var listArrows = document.querySelectorAll('.list_arrow');
+//
+//     //Pobieranie wybranych elementow z list
+//     var rightPanel = document.querySelector('.panel_right')
+//     var leftPanel = document.querySelector('.panel_left')
+//     var transportCost = document.querySelector('#transport');
+//
+//     //Pobieranie pol sumy
+//     var sum = document.querySelector('.sum strong');
+//
+//     //PÄtla po strzaĹkach + eventy
+//     for (var i = 0; i < listArrows.length; i++) {
+//         listArrows[i].addEventListener('click', function() {
+//             var listPanel = this.parentElement.querySelector('.list_panel');
+//             listPanel.classList.toggle('show');
+//         });
+//     }
+//
+//     var li = document.querySelectorAll('.list_panel li');
+//     for (var i = 0; i < li.length; i++) {
+//         li[i].addEventListener('click', function() {
+//             //po kliknieciu na li pobieram dataset target z jego rodzica
+//             //np target = "pattern"
+//             var target = this.parentElement.dataset.target;
+//             //wstawiam wartosc dataset.price do dataCost pod odpowiedni klucz
+//             //do obiektow mozna sie odwolywac jak w tablicach czyli
+//             //dataCost["pattern"]...
+//
+//             //dataset trzyma dane w formie string, trzeba je skonwertowac
+//             dataCost[target] = parseInt(this.dataset.price, 10);
+//             console.log(rightPanel, target)
+//             //pobieram odpowiedni element z right i left panel np
+//             //.right_panel .pattern
+//             //:scope oznacza - szukaj tylko w tym elemencie
+//             //mozna w sumie go poninac
+//             rightPanel.querySelector(':scope .'+target).innerText = this.dataset.price;
+//             leftPanel.querySelector(':scope .'+target).innerText = this.innerText;
+//             this.parentElement.classList.toggle('show')
+//
+//             //podliczam sume
+//             sum.innerText = sumCost();
+//
+//         });
+//     }
+//
+//
+//     //Etap 4 - informacje o transporcie na klik
+//     transportCost.addEventListener('click', function() {
+//         //metoda podobna do powyzszej.
+//         //czyli z dataset kliknietego checkboxa biore data-target
+//         //nastepnie pobieram na podstawie tej danej odpowiednie
+//         //elemnety ze strony i odpowiednia rzecz w dataCost
+//         var target = this.dataset.target;
+//         var price = parseInt(this.dataset.price, 10)
+//         if (!this.checked) {
+//             price = 0;
+//             rightPanel.querySelector(':scope .'+target).innerText = '';
+//             leftPanel.querySelector(':scope .'+target).innerText = '';
+//         } else {
+//             rightPanel.querySelector(':scope .'+target).innerText = price;
+//             leftPanel.querySelector(':scope .'+target).innerText = 'Transport';
+//         }
+//
+//         dataCost[target] = price;
+//
+//         sum.innerText = sumCost();
+//     });
 
 
 

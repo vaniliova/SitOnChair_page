@@ -12,35 +12,36 @@
 </head>
 
 <body>
+<!-- LOGO + MENU -->
   <nav class="nav">
     <div class="container">
       <div class="nav__logo">
         <a href="#"><span>Sit <span class="nav__logo--color">on</span> chair</span></a>
       </div>
-      <div class="nav__items">
+      <div class="nav__main">
         <ul>
-          <li><a href="#">O firmie</a></li>
-          <!--  Ukryta nawigacja -->
-            <li class="nav__items__detail">
-              <div class="nav__items__detail--arrow"></div>
-              <ul class="nav__items__detail-list">
-                <li><a href="">Aktualności</a></li>
-                <li><a href="">Nasz team</a></li>
-                <li><a href="">Historia</a></li>
-              </ul>
-            </li>
+          <li>
+            <a href="#">O firmie</a>
+            <ul class="nav__main__submenu">
+              <li><a href="">Aktualności</a></li>
+              <li><a href="">Nasz team</a></li>
+              <li><a href="">Historia</a></li>
+            </ul>
+          </li>
           <li><a href="#">Galeria</a></li>
           <li><a href="#">Kontakt</a></li>
         </ul>
       </div>
     </div>
   </nav>
+<!-- SLIDER -->
   <header class="main__header">
     <div class="container">
       <a class="header__arrow--left" href="#">&lt;</a>
       <div class="header__chair">
         <img src="./images/black_chair.png" alt="czarny fotel">
-        <img src="./images/red_chair.png" alt="czerwony fotel">
+        <img class="invisible" src="./images/red_chair.png" alt="czerwony fotel">
+        <img class="invisible" src="./images/orange.png" alt="pomarańczowy fotel">
       </div>
       <div class="header__info">
         <h1>Sit <span class="header__info--color">on</span> our <span class="header__info--color">chair</h1>
@@ -52,6 +53,7 @@
       <a class="header__arrow--right" href="#">&gt;</a>
     </div>
   </header>
+<!-- ZDJECIA + OPISY -->
   <aside>
     <div class="container">
       <div class="foto1">
@@ -77,6 +79,7 @@
       </div>
     </div>
   </aside>
+<!-- CENNIK -->
   <section class="section__price">
     <div class="container">
       <h2>Cennik</h2>
@@ -130,9 +133,7 @@
       </div>
     </div>
   </section>
-
-
-<!-- gotowy html do list rozwijanych -->
+<!-- CHOICE OPTIONS -->
   <section class="application">
     <div class="dropdown__container">
         <section class="choice_part inline">
@@ -174,9 +175,6 @@
                     <label class="choice__label" for="transport"></label>
                     <p class="checkbox__transport">Transport</p>
                 </div>
-
-                <!--<div class="checkbox"></div>-->
-                <!--<span class="list_label inline_text">Transport</span>-->
             </div>
         </section>
 
@@ -210,9 +208,7 @@
         </section>
     </div>
 </section>
-
-
-
+<!-- CONTACT -->
   <section class="section__contact">
     <div class="container">
       <h2>Kontakt</h2>
@@ -234,6 +230,7 @@
       </div>
     </div>
   </section>
+<!-- FOOTER -->
   <footer>
     <div class="container">
       <div class="footer__copy">
